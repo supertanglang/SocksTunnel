@@ -22,7 +22,7 @@ namespace loggable
 
         log4cpp::Category *Logger::getLogger()
         {
-            assert(logger_ != NULL);
+//            assert(logger_ != NULL);
             return logger_;
         }
     }
