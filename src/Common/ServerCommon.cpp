@@ -131,7 +131,7 @@ int createRemoteServer(const char *addr, int addrLen, uint16_t port, char type)
     {
         struct sockaddr_in6 *tmp = (struct sockaddr_in6 *)&storage;
         tmp->sin6_family = AF_INET6;
-        memcpy(&(tmp->sin6_addr.s6_addr16), addr, (size_t)addrLen);
+        memcpy(&(tmp->sin6_addr.s6_addr), addr, (size_t)addrLen);
         tmp->sin6_port = htons(port);
     }
     else

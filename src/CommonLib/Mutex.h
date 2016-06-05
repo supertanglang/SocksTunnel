@@ -5,6 +5,7 @@
 #include <windows.h>
 #else
 #include <pthread.h>
+#include "Barrier/pthread_barrier.h"
 #endif
 
 #include <assert.h>

@@ -6,6 +6,7 @@
 #define SOCKSTUNNELLOCAL_RANDOMUTILS_H
 
 #include <string>
+#include <stdlib.h>
 
 typedef std::string String;
 

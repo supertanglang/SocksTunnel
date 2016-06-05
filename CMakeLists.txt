@@ -8,6 +8,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 set(LINKLIB ev event pthread crypto z log4cpp)
 
 set(SOURCE_FILES
+        src/CommonLib/Barrier/pthread_barrier.h
+        src/CommonLib/Barrier/pthread_barrier.c
         src/CommonLib/Atomic.h
         src/CommonLib/Json.cpp
         src/CommonLib/Json.h
@@ -59,6 +61,7 @@ set(SOURCE_FILES
         src/Crypto/Chacha20.h
 )
 link_directories("/usr/local/lib")
+include_directories("/usr/local/include")
 add_executable(SocksTunnelServer ${SOURCE_FILES} src/server.cpp)
 target_link_libraries(SocksTunnelServer ${LINKLIB})
 
